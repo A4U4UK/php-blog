@@ -30,15 +30,32 @@
       return $article;
    }
 
-   function articles_new($title, $difficulty, $content){
-      // Код для добавления новой статьи в базу данных
-   }
+   function articles_new($link, $title, $content){ 
 
-   function articles_edit($id, $title, $difficulty, $content){
+      $title = trim($title);
+      $content = trim($content);
+      if ($title == '') {
+         return false;
+      }
+   
+      $query = "INSERT INTO articles (title, content) VALUES ('" . mysqli_real_escape_string($link, $title) . "', '" . mysqli_real_escape_string($link, $content) . "')";
+      $result = mysqli_query($link, $query);
+   
+      if (!$result) {
+         die(mysqli_error($link));
+      }
+   
+      return mysqli_insert_id($link);
+       // Возвращает идентификатор вставленной записи
+   }
+   
+   
+
+   function articles_edit($link, $id, $title, $difficulty, $content){
       // Код для редактирования существующей статьи в базе данных
    }
 
-   function articles_delete($id){
+   function articles_delete($link, $id){
       // Код для удаления существующей статьи из базы данных
    }
 
