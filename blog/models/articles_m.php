@@ -72,7 +72,21 @@ function articles_edit($link, $id, $title, $content){
 }
 
 function articles_delete($link, $id){
+      $id = (int)$id;
+
+      if ($id == 0)
+         return false;
+
+      $query = sprintf("DELETE FROM articles WHERE id= '%d'",$id);
+      $result =mysqli_query($link, $query);
+
+      if (!$result)
+         die(mysqli_affected_rows($link));
+
    // Код для удаления существующей статьи из базы данных
 }
+   function article_intro($text, $len= 400){
+      return mb_substr($text, 0, $len);
+   }
 
 ?>

@@ -77,7 +77,7 @@ if (isset($_GET['id'])) {
             <?php foreach ($articles as $a): ?>
                <div class="topic_block">
                   <h3><a href="index.php?id=<?= $a['id'] ?>"><?= $a['title'] ?></a></h3>
-                  <p class="block_text"><?= $a['content'] ?></p>
+                  <p class="block_text"> <?=article_intro( $a['content'] )?></p>
                </div>
             <?php endforeach; ?>
          </div>

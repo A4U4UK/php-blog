@@ -31,7 +31,15 @@ if ($action == "add") {
    $article = articles_get($link, $id);
 
    include("../views/article_admin_add.php");
-} else {
+} 
+
+else if ($action ==  "delete"){
+   $id =  $_GET['id'];
+   $article = articles_delete($link, $id);
+   header("Location: index.php");
+}
+ 
+else {
    $articles = articles_all($link);
    include("../views/articles_admin.php");
 }
