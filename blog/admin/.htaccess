@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Nikita Panel"
+AuthUserFile C:\xampp\htdocs\blog-php\php-blog\blog\admin\.htpasswd1
+Require valid-user
