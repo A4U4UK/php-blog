@@ -22,6 +22,9 @@ if (isset($_GET['id'])) {
          <meta name="theme-color" content="#3370ff">
          <link rel="manifest" href="manifest.json">
          <link rel="stylesheet" href="custom.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
          <title class="main_title"><?= $article['title'] ?></title>
       </head>
       <body>
@@ -32,8 +35,11 @@ if (isset($_GET['id'])) {
             </div>
          </header>
          <div class="topic">
-            <h2><a href="http://localhost/blog-php/php-blog/blog/">На главную</a></h2>
-            <h1><?= $article['title'] ?></h1>
+            <button class="back_button"><a  href="http://localhost/blog-php/php-blog/blog/">На главную</a></button>
+         <div>
+         <div class="topic">
+            
+            <h1 class="them_text"><?= $article['title'] ?></h1>
             <div class="topic_block">
                <p class="theme_text_in"><?= $article['content'] ?></p>
             </div>
@@ -84,6 +90,10 @@ if (isset($_GET['id'])) {
    <meta name="theme-color" content="#3370ff">
    <link rel="manifest" href="manifest.json">
       <link rel="stylesheet" href="custom.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
       <title>Темы по предмету</title>
    </head>
    <body>
@@ -94,13 +104,15 @@ if (isset($_GET['id'])) {
          </div>
             <a class="navbar_text-admin" href="admin">ADMIN</a>
       </header>
-      <div class="topic">
-         <h1>Темы по предмету</h1>
+      <div class="topic_top">
+            <h1 class="topic_title">Темы по предмету</h1></div>
          <div>
+      <div class="topic">
             <?php foreach ($articles as $a): ?>
                <div class="topic_block">
                   <h3><a href="index.php?id=<?= $a['id'] ?>"><?= $a['title'] ?></a></h3>
                   <p class="theme_text"class="block_text"> <?=article_intro( $a['content'] )?></p>
+                  <hr>
                </div>
             <?php endforeach; ?>
          </div>

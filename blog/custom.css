@@ -1,6 +1,9 @@
+*{
+   font-family: 'Ubuntu', sans-serif;
+}
 body {
    box-sizing: border-box;
-   background-color: #9c9c9c;
+   background-color: #DAFFFB;
    margin: 0%;
 }
 
@@ -8,22 +11,27 @@ a {
    text-decoration: none;
 }
 
-h1 {
-   color: darkblue;
-   font-size: 3em;
+hr{
+   background-color:#001C30;
+   height: 2px;
 }
 
 .back_button {
    font-size: x-large;
-   color: rgb(37, 36, 36);
-   background-color: none;
+   color:#DAFFFB;
+   background-color: #213363;
    font-weight: bold;
-
+   width: 160px;
+   border-radius: 10px;
+   border:none;
+   height: 40px;
+   transition: 0.3s;
+   margin-bottom: 15px;
 }
 
 .back_button:hover {
    font-size: x-large;
-   color: rgb(125, 0, 166);
+   background-color: #3AA6B9;
    background-color: none;
    font-weight: bolder;
 }
@@ -31,33 +39,47 @@ h1 {
 .delete_but {
    color: #7a4e25;
    font-weight: bold;
+   transition: 0.3s;
 }
 
 .delete_but:hover {
-   color: #8b1200;
+   color: #B31312;
    font-weight: bold;
+}
+
+.td_p{
+   width: 1000px;
 }
 
 .edit_but {
-   color: #373b84;
-   font-weight: bold;
+   color: #C2DEDC;
+   font-weight: 700;
+   transition: 0.3s;
 }
 
 .edit_but:hover {
-   color: #8c90de;
-   font-weight: bold;
+   color: #090580;
+   font-weight: 700;
 }
 
 .add_but {
-   font-weight: bold;
    font-size: x-large;
-   color: rgb(0, 10, 19);
+   color:#DAFFFB;
+   background-color: #213363;
+   font-weight: bold;
+   width: 230px;
+   border-radius: 10px;
+   border:none;
+   height: 40px;
+   transition: 0.3s;
+   margin-bottom: 15px;
 }
 
 .add_but:hover {
-   font-weight: bold;
    font-size: x-large;
-   color: rgb(0, 142, 157);
+   background-color: #3AA6B9;
+   background-color: none;
+   font-weight: bolder;
 }
 
 .name_th {
@@ -75,27 +97,46 @@ h1 {
    color: rgb(204, 204, 204);
 }
 
+
+.topic_top{
+   margin: 2% 1.5%;
+   padding: 0.5% 2%;
+   background-color:#5A96E3;
+}
+
+.topic_title{
+   font-weight: 700;
+   color:#001C30;
+}
+
 h3 {
-   color: rgb(71, 71, 217);
+   color: #1F6E8C;
    font-size: 2em;
-   margin: 1.5ex;
 }
 
 .theme_text {
-   color: rgb(79, 79, 134);
-   font-size: 1em;
+   color: #213363;
+   font-size: 1.5em;
+   font-weight: 700;
 }
 
+.them_text {
+   color: #213363;
+   font-size: 3em;
+   font-weight: 700;
+   margin: 0;
+}
 .theme_text_in {
-   color: rgb(79, 79, 134);
+   color: #164B60;
    font-size: 1.5em;
 }
 
 /* Стили для класса "topic" */
 .topic {
-   margin: 2% 6%;
-   background-color: beige;
-   padding: 1% 3%;
+   margin: 2% 1.5%;
+   background-color: #A1C2F1;
+   padding: 0.5% 2%;
+   
 }
 
 /* Стили для класса "themes" */
@@ -142,21 +183,30 @@ h3 {
    max-width: 300px;
 
 }
-
+.theme_edit_title{
+   font-weight: 700;
+   color:#213363;
+}
+.theme_edit_text{
+   font-weight: 700;
+   color:#FBFFDC;
+}
 /* Стили для заголовков таблицы */
 .topic_table th {
-   background-color: #727272;
+   background-color: #4F709C;
    padding: 10px;
    text-align: left;
    color: aliceblue;
    font-size: xx-large;
+   width: 100%;
 }
 
 /* Стили для ячеек таблицы */
 .topic_table td {
-   padding: 10px;
-   background-color: #c1c1c1;
+   padding: 20px;
+   background-color: #5A96E3;
    font-size: x-large;
+   width: 1000px;
 }
 
 .main_activity_icon {
@@ -256,7 +306,7 @@ table {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #353535;
+   background-color: #001C30;
 }
 
 .navbar_icon {
@@ -267,7 +317,9 @@ table {
 
 .navbar_text {
    font-size: 2.5em;
-   color: rgb(181, 181, 181);
+   color: #DAFFFB;
+   font-weight: 700;
+   text-transform: uppercase;
 }
 
 .navbar_text-admin {

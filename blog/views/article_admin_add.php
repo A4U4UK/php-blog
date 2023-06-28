@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <title>Мой первый Блог</title>
 <link rel="stylesheet" href="../custom.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 </head> 
 <body>
    <header class="navbar">
@@ -14,7 +16,7 @@
          </div>
    </header>
    <div class="topic">
-   <p class="back_button"><a  href="http://localhost/blog-php/php-blog/blog/">На главную</a></p>
+   <button class="back_button"><a  href="http://localhost/blog-php/php-blog/blog/">На главную</a></button>
       <div class="new_theme"> 
          <form method="post" action="index.php?action=add">
          <p class="title_the">Заполните новую тему</p>

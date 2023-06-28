@@ -91,5 +91,8 @@ function articles_delete($link, $id)
 function article_intro($text, $len = 400)
 {
    return mb_substr($text, 0, $len);
+}function article_intro_edit($text, $len = 50)
+{
+   return mb_substr($text, 0, $len);
 }
 ?>
